@@ -1,3 +1,4 @@
+# Method to search nested dictionary based on string argument
 def print_course_details(user_course):
     course_list = {
         'CSC101': { 'Room': 3004, 'Instructor': 'Haynes', 'Time': '8:00 a.m.'},
@@ -7,15 +8,19 @@ def print_course_details(user_course):
         'COM241': { 'Room': 1411, 'Instructor': 'Lee', 'Time': '1:00 p.m.'}}
 
     print('Details for: {}'.format(user_course))
+    # Outer-loop to search primary keys
     for key1, value1 in course_list.items():
+        # When primary key found, run inner-loop to print details
         if key1 == user_course:
             for key2, value2 in value1.items():
                 print('{}: {}'.format(key2, value2))
             break
 
 def main():
+    # Get input from user
     user_input = input('Enter course name: ')
 
+    # Call method with user input
     print_course_details(user_input)
 
 if __name__ == '__main__':main()
