@@ -11,7 +11,7 @@ def print_course_details(user_course):
         if key1 == user_course:
             for key2, value2 in value1.items():
                 print('{}: {}'.format(key2, value2))
-        break
+            break
 
 def main():
     user_input = input('Enter course name: ')
